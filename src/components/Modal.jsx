@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdCancel } from "react-icons/md"
 import { WithContext as ReactTags } from 'react-tag-input';
-import {KeyCodes, suggestions, generateID } from "../../src/tags"
+import {KeyCodes, delimiters, suggestions, generateID } from "../../src/tags"
 
 const delimiters = [KeyCodes.comma, KeyCodes.enter];
 

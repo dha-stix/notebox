@@ -9,7 +9,7 @@ export const suggestions = [
 		text: type.text,
 	};
 });
-
+export const delimiters = [KeyCodes.comma, KeyCodes.enter];
 export const KeyCodes = {
 	comma: 188,
 	enter: 13,

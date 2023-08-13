@@ -39,6 +39,7 @@ const Modal = ({ setDisplayModal, title, setTitle, setContent, content, myNotebo
         const newNotes = [{ title, content, tags, id: generateID() }]
         localStorage.setItem("my_notebook", JSON.stringify(newNotes))
     }
+	  alert("Noted created ✅") 
         setContent("")
         setTitle("")
         setDisplayModal(false)

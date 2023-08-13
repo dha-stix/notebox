@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { MdCancel } from "react-icons/md"
 import { WithContext as ReactTags } from 'react-tag-input';
-import {KeyCodes, delimiters, suggestions, generateID } from "../../src/tags"
+import {delimiters, suggestions, generateID } from "../../src/tags"
 
-const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
 const Modal = ({ setDisplayModal, title, setTitle, setContent, content, myNotebook, setMyNotebook }) => {
     const handleCloseModal = () => setDisplayModal(false)

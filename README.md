@@ -1,8 +1,5 @@
-# React + Vite
+# NoteBox - Built with React.JS, Tailwind CSS & local storage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Version - [https://notebox-three.vercel.app](https://notebox-three.vercel.app/)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The `App.jsx` is the main entry point to the application - which is also divided into the `Nav`, `Main`, and `Modal` components.

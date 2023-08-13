@@ -12,7 +12,8 @@ const Main = ({ myNotebook, setDisplayModal, setTitle, setContent, setMyNotebook
         const notes = localStorage.getItem("my_notebook")
         const notesArray = JSON.parse(notes)
         const newNotesArray = notesArray.filter(note => note.id !== id)
-        localStorage.setItem("my_notebook", JSON.stringify(newNotesArray))  
+        localStorage.setItem("my_notebook", JSON.stringify(newNotesArray)) 
+        alert("Note deleted ✅")
     }
 
     const handleDelete = (id) => {
@@ -25,16 +26,13 @@ const Main = ({ myNotebook, setDisplayModal, setTitle, setContent, setMyNotebook
         }    
     }
 
-    const handleTagChange = (e) => {
+       const handleTagChange = (e) => {
         setCategory(e.target.value)
-        console.log(e.target.value)
         const notebook = localStorage.getItem("my_notebook")
         const notes = JSON.parse(notebook)
-        console.log("NOTE >>", notes)
-        const filteredNote = notes.filter(note => note.tags.filter(tag => tag.text !== e.target.value).length === 0)
+        const filteredNote = notes.filter(note => note.tags.some(tag => tag.text === e.target.value))
        setMyNotebook(filteredNote)
     }
-    
   return (
       <main className='py-8 md:px-10 px-3'>
           <div className="flex items-center justify-between">
